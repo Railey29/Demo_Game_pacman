@@ -8,6 +8,10 @@ CORS(app)
 
 game_thread = None
 
+@app.route('/')
+def index():
+    return "Go to /start-game link"
+
 @app.route('/start-game')
 def starting_game():
     global game_thread
